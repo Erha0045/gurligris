@@ -1,0 +1,11 @@
+body {
+
+    background-image: url("../static/images/baggrund2.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+h1 {
+    color: hotpink;
+    margin-left: 20px;
+}

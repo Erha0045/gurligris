@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurli gris fan-side</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--<link rel="stylesheet" href="firststyle.css">-->
+
+</head>
+<body>
+<!--<img src="../static/images/baggrund.jpg" style="width:100%; height: 100%">-->
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('../resources/static/images/baggrund.jpg');
+        min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url("../resources/static/images/baggrund2.jpg");
+        min-height: 100%;
+    }
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+        .bgimg-1, .bgimg-2{
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+    }
+</style>
+
+
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+     style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:" onclick="menu_close()" class="w3-bar-item w3-button">Close Menu</a>
+    <a href="gurli.html" onclick="menu_close()" class="w3-bar-item w3-button">Gurli</a>
+    <a href="#familie" onclick="menu_close()" class="w3-bar-item w3-button">Familie</a>
+    <a href="#venner" onclick="menu_close()" class="w3-bar-item w3-button">Venner</a>
+
+
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top" style="opacity: 0.75">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="menu_open()">☰</div>
+        <div class="w3-center w3-padding-16">Gurli gris fan-side!</div>
+    </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+</div>
+<script>
+    // Script to open and close sidebar
+    function menu_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function menu_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+</body>
+</html>
